@@ -97,7 +97,7 @@
 /* Hero */
 .hero {
   position: relative;
-  padding: 12rem 5% 6rem;
+  padding: 8rem 5% 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -120,18 +120,18 @@
 }
 
 .heroTitle {
-  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-size: clamp(2rem, 4.5vw, 4rem);
   line-height: 1.05;
   max-width: 900px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
 .heroSubtitle {
   color: var(--text-secondary);
-  font-size: 1.125rem;
+  font-size: 1rem;
   max-width: 500px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .heroButtons {
@@ -163,6 +163,39 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+.heroImageTrack {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  overflow: visible;
+}
+
+.heroTrackImage {
+  width: 280px;
+  height: 380px;
+  border-radius: 24px;
+  object-fit: cover;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.heroTrackImage:nth-child(even) {
+  transform: translateY(2rem);
+}
+
+.heroTrackImage:hover {
+  transform: translateY(-1rem) scale(1.05);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+.heroTrackImage:nth-child(even):hover {
+  transform: translateY(1rem) scale(1.05);
 }
 
 .avatarGroup {
