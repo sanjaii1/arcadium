@@ -28,7 +28,7 @@ export default function Home() {
       <FAQ />
       <Awards />
       <CTABanner />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
