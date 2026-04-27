@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.noto-sans {
+  font-family: 'Noto Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.geist-mono {
+  font-family: 'Geist Mono', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 :root {
-  --font-sans: var(--font-outfit), sans-serif;
-  --font-serif: var(--font-playfair), serif;
+  --font-sans: 'Noto Sans', sans-serif;
+  --font-serif: 'Geist Mono', monospace;
 
   --bg-primary: #ffffff;
   --bg-secondary: #f9f9f9;

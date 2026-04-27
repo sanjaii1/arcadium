@@ -1,17 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
 
 export const metadata: Metadata = {
   title: "Avidci | Bold Brands & Thoughtful Design",
@@ -25,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${playfair.variable}`}>
+      <body>
         {children}
       </body>
     </html>

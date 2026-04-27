@@ -24,7 +24,7 @@ export default function Home() {
       <Portfolio />
       <Team />
       <Testimonials />
-      <Pricing />
+      {/* <Pricing /> */}
       <FAQ />
       <Awards />
       <CTABanner />
