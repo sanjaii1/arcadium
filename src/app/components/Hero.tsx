@@ -1,30 +1,34 @@
 "use client";
 import styles from "../page.module.css";
 import ScrollReveal from "./ScrollReveal";
+import TextReveal from "./TextReveal";
 
 export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.heroBg}></div>
-      <ScrollReveal delay={0} distance={50} duration={900}>
+      
+      <TextReveal delay={0.1} duration={1.2}>
         <h1 className={styles.heroTitle}>
           Building bold brands with <span className="serif-italic">thoughtful design</span>
         </h1>
-      </ScrollReveal>
-      <ScrollReveal delay={150} distance={40} duration={900}>
+      </TextReveal>
+
+      <TextReveal delay={0.4} duration={1}>
         <p className={styles.heroSubtitle}>
           We fuse strategy, architecture and user interface engineering to create exceptional impactful digital experiences that move humanity forward.
         </p>
-      </ScrollReveal>
-      <ScrollReveal delay={300} distance={30} duration={900}>
+      </TextReveal>
+
+      <TextReveal delay={0.6} duration={0.8}>
         <div className={styles.heroButtons}>
           <button className={styles.primaryBtn}>
             Start project
           </button>
         </div>
-      </ScrollReveal>
+      </TextReveal>
 
-      <ScrollReveal delay={450} distance={40} duration={900}>
+      <ScrollReveal delay={800} distance={40} duration={1000}>
         <div className={styles.heroImageTrack}>
           <img src="/images/agency.png" className={styles.heroTrackImage} alt="Agency Dashboard" />
           <img src="/images/saas.png" className={styles.heroTrackImage} alt="SaaS Interface" />
@@ -35,3 +39,4 @@ export default function Hero() {
     </section>
   );
 }
+
