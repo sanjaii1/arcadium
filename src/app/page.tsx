@@ -1,9 +1,9 @@
 import styles from "./page.module.css";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import Brands from "./components/Brands";
-import MissionStats from "./components/MissionStats";
+import About from "./components/About";
 import Services from "./components/Services";
+import Process from "./components/Process";
 import Portfolio from "./components/Portfolio";
 import Team from "./components/Team";
 import Testimonials from "./components/Testimonials";
@@ -18,9 +18,9 @@ export default function Home() {
     <main className={styles.main}>
       <Header />
       <Hero />
-      <Brands />
-      <MissionStats />
+      <About />
       <Services />
+      <Process />
       <Portfolio />
       {/* <Team /> */}
       <Testimonials />

@@ -242,149 +242,112 @@
   letter-spacing: 2px;
 }
 
-/* Brands — marquee redesign */
-.brandsSection {
+/* Brands - New Grid Design */
+.brandsNewSection {
   width: 100%;
-  padding: 3.5rem 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 6rem 5%;
+  background: var(--bg-secondary, #f8fafc);
   margin-bottom: var(--spacing-section);
+  border-radius: 40px;
+  max-width: 1200px;
+  margin: 0 auto var(--spacing-section);
   overflow: hidden;
 }
 
-.brandsHeader {
-  text-align: center;
-  margin-bottom: 2rem;
-  padding: 0 5%;
-}
-
-.brandsTrustBadge {
-  display: inline-block;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  background: rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: var(--border-radius-full);
-  padding: 0.35rem 1rem;
-  margin-bottom: 0.75rem;
-}
-
-.brandsTagline {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-/* Marquee */
-.marqueeWrapper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.marqueeFade {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.marqueeFade[data-side="left"] {
-  left: 0;
-  background: linear-gradient(to right, var(--bg-primary, #fff) 0%, transparent 100%);
-}
-
-.marqueeFade[data-side="right"] {
-  right: 0;
-  background: linear-gradient(to left, var(--bg-primary, #fff) 0%, transparent 100%);
-}
-
-.marqueeTrack {
-  display: flex;
-  gap: 1rem;
-  width: max-content;
-  animation: marqueeScroll 28s linear infinite;
-  padding: 0.5rem 0;
-}
-
-.marqueeTrack:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marqueeScroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.marqueeChip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: var(--border-radius-full);
-  background: rgba(0, 0, 0, 0.035);
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  white-space: nowrap;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-  cursor: default;
-}
-
-.marqueeChip:hover {
-  background: white;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transform: translateY(-2px);
-}
-
-.marqueeChipIcon {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* Stats row */
-.brandsMeta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 2.5rem;
-  padding: 0 5%;
-  flex-wrap: wrap;
-}
-
-.brandsMetaItem {
+.brandsNewContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.2rem;
 }
 
-.brandsMetaItem strong {
-  font-size: 1.75rem;
+.brandsNewHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.brandsNewTitle {
+  font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
   color: var(--text-primary);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.brandsNewSubtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.brandsNewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+}
+
+.brandsNewCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.brandsNewLogoWrapper {
+  width: 64px;
+  height: 64px;
+  background: var(--bg-secondary, #f1f5f9);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.brandsNewCard:hover .brandsNewLogoWrapper {
+  background: var(--text-primary);
+  color: white;
+  transform: scale(1.05) rotate(-5deg);
+}
+
+.brandsNewIcon {
+  font-size: 2rem;
   line-height: 1;
 }
 
-.brandsMetaItem span {
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 500;
+.brandsNewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.brandsMetaDivider {
-  width: 1px;
-  height: 2.5rem;
-  background: rgba(0, 0, 0, 0.1);
+.brandsNewName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.brandsNewRole {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media(max-width: 768px) {
+  .brandsNewGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Base sections */
@@ -407,28 +370,31 @@
 .highlightPink {
   background: var(--pastel-pink);
   color: #e11d48;
-  padding: 0.1rem 0.75rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 12px;
   display: inline-block;
   transform: rotate(-2deg);
+  margin: 0 0.25rem;
 }
 
 .highlightBlue {
   background: var(--pastel-blue);
   color: var(--accent-blue);
-  padding: 0.1rem 0.75rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 12px;
   display: inline-block;
   transform: rotate(1deg);
+  margin: 0 0.25rem;
 }
 
 .highlightOrange {
   background: var(--pastel-orange);
   color: #ea580c;
-  padding: 0.1rem 0.75rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 12px;
   display: inline-block;
   transform: rotate(-1deg);
+  margin: 0 0.25rem;
 }
 
 .stats {
@@ -931,6 +897,133 @@
   margin-top: 1.5rem;
 }
 
+/* Process */
+.processHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.processHeader .sectionTitle {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.processLine {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  min-width: 100px;
+}
+
+.processBtn {
+  background: #1a1a1a;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s, transform 0.2s;
+  white-space: nowrap;
+}
+
+.processBtn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.processGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.processCard {
+  padding: 3rem;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media(max-width: 768px) {
+  .processCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+.processCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.processStepInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+}
+
+.processStepNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.processCard.cardPink .processStepNumber {
+  color: #e11d48;
+}
+
+.processCard.cardBlue .processStepNumber {
+  color: var(--accent-blue);
+}
+
+.processCard.cardOrange .processStepNumber {
+  color: #ea580c;
+}
+
+.processCard.cardGreen .processStepNumber {
+  color: #16a34a;
+}
+
+.processStepTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.processDivider {
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  min-width: 50px;
+}
+
+@media(max-width: 768px) {
+  .processDivider {
+    width: 100%;
+    height: 1px;
+    min-width: auto;
+  }
+}
+
+.processStepDesc {
+  max-width: 500px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
 /* Footer Banner */
 .footerBanner {
   background: linear-gradient(135deg, var(--pastel-pink), var(--pastel-blue), var(--pastel-orange));
@@ -1005,3 +1098,283 @@
   color: var(--text-light);
   font-size: 0.875rem;
 }
+
+/* ─── About Section ─────────────────────────────────────────────── */
+.aboutSection {
+  padding: 5rem 5% 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+}
+
+.aboutLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin-bottom: 1.75rem;
+}
+
+.aboutHeading {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 3.5rem;
+}
+
+.aboutHeadingMuted {
+  color: #adb5bd;
+}
+
+.aboutIconBadgeBlue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2563eb;
+  color: white;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  flex-shrink: 0;
+}
+
+.aboutIconBadgeGreen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #a8e063;
+  color: #1a1a1a;
+  vertical-align: middle;
+  margin: 0 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Grid */
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 0.9fr;
+  gap: 1.25rem;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .aboutGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .aboutRightCol {
+    grid-column: 1 / -1;
+    flex-direction: row !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* LEFT — Blue photo card */
+.aboutCardBlue {
+  background: #3b82f6;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  min-height: 420px;
+}
+
+.aboutCardBluTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.25rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutBrand {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.aboutBarIcon {
+  width: 36px;
+  height: 36px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a1a1a;
+}
+
+.aboutPersonWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.aboutPersonImg {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.aboutBlueStatBox {
+  background: white;
+  margin: 0 0.85rem 0.85rem;
+  border-radius: 18px;
+  padding: 1.1rem 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutBigStat {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.02em;
+}
+
+.aboutStatDesc {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* MIDDLE — Light commitment card */
+.aboutCardLight {
+  background: #f3f4f6;
+  border-radius: 28px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aboutCardMeta {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.aboutPercentStat {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.aboutAvatarRow {
+  display: flex;
+  margin-bottom: 1.25rem;
+}
+
+.aboutAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid white;
+  object-fit: cover;
+  margin-left: -10px;
+}
+
+.aboutAvatar:first-child {
+  margin-left: 0;
+}
+
+.aboutQuote {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-style: normal;
+  margin-top: auto;
+}
+
+/* RIGHT — Stacked cards */
+.aboutRightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Lime card */
+.aboutCardLime {
+  background: #ccff00;
+  border-radius: 28px;
+  padding: 1.5rem 1.5rem 1.75rem;
+  flex: 1;
+}
+
+.aboutCardMetaDark {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #3a4a00;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
+.aboutLimeStat {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.aboutLimeDesc {
+  font-size: 0.82rem;
+  color: #3a4a00;
+  line-height: 1.5;
+}
+
+/* Dark card */
+.aboutCardDark {
+  background: #111111;
+  border-radius: 28px;
+  padding: 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.aboutCardMetaLight {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.aboutDarkStat {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}

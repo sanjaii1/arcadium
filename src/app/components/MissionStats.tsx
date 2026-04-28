@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 
 export default function MissionStats() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} style={{ marginTop: "2rem", paddingTop: "3rem" }}>
       <ScrollReveal distance={50} duration={800}>
         <h2 className={styles.missionText}>
           We fuse <span className={styles.highlightPink}>✧ Creativity</span>{" "}
