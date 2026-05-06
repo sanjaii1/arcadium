@@ -23,10 +23,10 @@ export default function Home() {
       <Process />
       <Portfolio />
       {/* <Team /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <FAQ />
-      <Awards />
+      {/* <Awards /> */}
       <CTABanner />
       <Footer />
     </main>
