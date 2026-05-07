@@ -117,6 +117,113 @@
   transform: translateY(-2px);
 }
 
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 0 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.hamburgerLine.open:first-child {
+  transform: translateY(4px) rotate(45deg);
+}
+
+.hamburgerLine.open:last-child {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .headerBtn {
+    display: none;
+  }
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 5% 4rem;
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.mobileNavLink {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.mobileNavLink:hover {
+  transform: scale(1.05);
+}
+
+.mobileMenuFooter {
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.mobileStartBtn {
+  width: 100%;
+  max-width: 300px;
+  background: #000;
+  color: white;
+  padding: 1.25rem;
+  border-radius: 999px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border: none;
+}
+
+
 /* Hero */
 .hero {
   position: relative;
@@ -199,6 +306,13 @@
   overflow: visible;
 }
 
+@media (max-width: 768px) {
+  .heroImageTrack {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+}
+
 .heroTrackImage {
   width: 280px;
   height: 380px;
@@ -208,9 +322,28 @@
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
 }
 
+@media (max-width: 1024px) {
+  .heroTrackImage {
+    width: 200px;
+    height: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTrackImage {
+    width: 140px;
+    height: 200px;
+  }
+  
+  .heroTrackImage:nth-child(n+4) {
+    display: none;
+  }
+}
+
 .heroTrackImage:nth-child(even) {
   transform: translateY(2rem);
 }
+
 
 .heroTrackImage:hover {
   transform: translateY(-1rem) scale(1.05);
@@ -420,6 +553,17 @@
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .stats {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .statItem h3::before {
+    left: -18px;
+  }
+}
+
 .statItem h3 {
   font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 500;
@@ -442,6 +586,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
 
 /* Services New */
 .servicesSectionNew {
@@ -1046,8 +1191,20 @@
 
 .processHeader .sectionTitle {
   margin-bottom: 0;
-  white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+  .processHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  
+  .processLine {
+    display: none;
+  }
+}
+
 
 .processLine {
   flex-grow: 1;
@@ -1175,6 +1332,14 @@
   position: relative;
   overflow: hidden;
 }
+
+@media (max-width: 768px) {
+  .footerBanner {
+    padding: 4rem 1.5rem;
+    border-radius: 32px;
+  }
+}
+
 
 
 .footerBannerIcon {
@@ -1462,6 +1627,14 @@
   gap: 3rem;
 }
 
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+
 
 @media(max-width: 900px) {
   .modalFormGrid {
@@ -1576,6 +1749,13 @@
   margin-bottom: 3.5rem;
 }
 
+@media (max-width: 768px) {
+  .aboutHeading br {
+    display: none;
+  }
+}
+
+
 .aboutHeadingMuted {
   color: #adb5bd;
 }
@@ -1627,11 +1807,26 @@
   }
 }
 
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 3rem 5% 4rem;
+  }
+  
+  .aboutHeading {
+    margin-bottom: 2rem;
+  }
+  
+  .aboutRightCol {
+    flex-direction: column !important;
+  }
+}
+
 @media (max-width: 600px) {
   .aboutGrid {
     grid-template-columns: 1fr;
   }
 }
+
 
 /* LEFT — Blue photo card */
 .aboutCardBlue {

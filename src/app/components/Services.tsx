@@ -74,6 +74,7 @@ export default function Services() {
                 key={index}
                 className={`${styles.servicesNewCard} ${activeCard === index ? styles.active : ""}`}
                 onMouseEnter={() => setActiveCard(index)}
+                onClick={() => setActiveCard(index)}
               >
                 <div className={styles.servicesNewIconWrapper}>
                   {service.icon}
